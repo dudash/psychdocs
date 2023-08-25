@@ -5,3 +5,7 @@ Using LLMs to access psychology docs via natural language. The plan is to build 
 * finetuner
 * ingester
 * webapp
+
+## arch sketch
+DRAFT fits together like this:
+<img src="./arch.png"/>
