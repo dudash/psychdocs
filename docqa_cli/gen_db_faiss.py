@@ -16,19 +16,23 @@ from langchain.embeddings import HuggingFaceEmbeddings
 print("Beginning FAISS vectorstore generation, this may take several minutes...")
 start = timeit.default_timer()
 
-# Load PDF file from data path
-loader = DirectoryLoader('data/', glob="*.pdf", loader_cls=PyPDFLoader)
+# Load alls PDF files from data path using langchain's DirectoryLoader
+print(f"Loading PDFs from data path...")
+loader = DirectoryLoader('data/', glob="*.pdf", loader_cls=PyPDFLoader, show_progress=True, use_multithreading=True)
 documents = loader.load()
 
 # Split text from PDF into chunks
+print(f"Splitting documents into chunks...")
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
 texts = text_splitter.split_documents(documents)
 
 # Load embeddings model
+# https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
 embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2',
                                 model_kwargs={'device': 'cpu'})
 
 # Build and persist FAISS vector store
+print(f"Building FAISS vectorstore from documents...")
 vectorstore = FAISS.from_documents(texts, embeddings)
 vectorstore.save_local('vectorstore/db_faiss')
 
