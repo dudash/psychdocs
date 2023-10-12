@@ -12,3 +12,9 @@ Right now the CLI works but the rest is still in work.
 ## arch sketch
 DRAFT fits together like this:
 <img src="./arch.png"/>
+
+Some early flow designs:
+<img src="./services_flow.png"/>
+
+Initial data design thoughts:
+<img src="./data_design.png"/>

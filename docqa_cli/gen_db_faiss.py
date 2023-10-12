@@ -18,13 +18,16 @@ start = timeit.default_timer()
 
 # Load alls PDF files from data path using langchain's DirectoryLoader
 print(f"Loading PDFs from data path...")
-loader = DirectoryLoader('data/', glob="*.pdf", loader_cls=PyPDFLoader, show_progress=True, use_multithreading=True)
+loader = DirectoryLoader('data/', glob="**/*.pdf", loader_cls=PyPDFLoader, show_progress=True, use_multithreading=True)
 documents = loader.load()
+# print the number of documents loaded
+print(f"Loaded directory in a list of {len(documents)} document pages")
 
-# Split text from PDF into chunks
+# Split text from PDF into chunks - we have to do this because to not overload the embeddings model token size
 print(f"Splitting documents into chunks...")
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
 texts = text_splitter.split_documents(documents)
+print(f"Split document pages into {len(texts)} chunks")
 
 # Load embeddings model
 # https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
