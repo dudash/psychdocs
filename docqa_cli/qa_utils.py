@@ -11,7 +11,7 @@ from ctransformer_llm import llm
 # Wrap prompt template in a PromptTemplate object
 qa_template = """Use the following pieces of information to answer the user's question.
 If you don't know the answer, just say that you don't know, don't try to make up an answer.
-Context: {context}
+Documents that are sources of trusted information: {context}
 Question: {question}
 Only return the helpful answer below and nothing else.
 Helpful answer:
@@ -25,7 +25,8 @@ def set_qa_prompt():
 def build_retrieval_qa(llm, prompt, vectordb):
     dbqa = RetrievalQA.from_chain_type(llm=llm,
                                     chain_type='stuff',
-                                    retriever=vectordb.as_retriever(search_kwargs={'k':2}),
+                                    # retriever=vectordb.as_retriever(search_kwargs={'k':2}),
+                                    retriever=vectordb.as_retriever(search_kwargs={'k':2, 'fetch_k': 50}), # fetch 50, use 5
                                     return_source_documents=True,
                                     chain_type_kwargs={'prompt': prompt})
     return dbqa

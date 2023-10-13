@@ -11,6 +11,8 @@ if __name__ == "__main__":
     parser.add_argument('input', type=str)
     args = parser.parse_args()
 
+    print(f'Querying with Input: {args.input}')
+
     start = timeit.default_timer()
     dbqa = setup_dbqa()
     response = dbqa({'query': args.input}) # Parse input from argparse into QA object
