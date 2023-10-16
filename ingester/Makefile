@@ -1,11 +1,11 @@
 build:
-    go build -o ingester .
+	go build -o ingester .
 
 run: build
-    ./myapp
+	./ingester
 
 docker-build:
-    docker build -t ingester .
+	docker build -t ingester .
 
 docker-run: docker-build
-    docker run -p 8080:8080 myapp
+	docker run -p 8080:8080 ingester
