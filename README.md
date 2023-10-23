@@ -1,6 +1,8 @@
 # psychdocs (DRAFT)
-Using LLMs to access psychology docs via natural language. The plan is to build out several components:
-* webapp
+Using LLMs to access psychology docs via natural language. Technically, this is known as [Retreival Augemented Generation](https://www.promptingguide.ai/techniques/rag).
+
+The plan for this system architecture is to build out several components that can deploy to, scale within, and be managed using Kubernetes/OpenShift:
+* [webapp](./webapp)
 * query_api
 * [ingester](./ingester)
 * finetuner
