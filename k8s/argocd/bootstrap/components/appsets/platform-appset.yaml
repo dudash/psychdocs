@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: platform-apps
+  name: platform-appset
   namespace: openshift-gitops
 spec:
   generators:
@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/dudash/psychdocs
       revision: main
       directories:
-      - path: platform/*
+      - path: k8s/argocd/platform/*
   template:
     metadata:
       name: '{{path.basename}}'
@@ -22,7 +22,7 @@ spec:
       - kind: ConfigMap
         jsonPointers:
         - /data/service-ca.crt
-      project: platform
+      project: platform-project
       syncPolicy:
         automated:
           prune: true
