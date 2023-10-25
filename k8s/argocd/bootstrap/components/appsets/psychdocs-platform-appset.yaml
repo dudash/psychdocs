@@ -22,7 +22,7 @@ spec:
       - kind: ConfigMap
         jsonPointers:
         - /data/service-ca.crt
-      project: platform-project
+      project: psychdocs-platform
       syncPolicy:
         automated:
           prune: true
