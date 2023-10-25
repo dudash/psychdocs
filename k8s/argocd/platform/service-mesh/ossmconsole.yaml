@@ -3,5 +3,5 @@ kind: OSSMConsole
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "30"
-  namespace: openshift-operators
+  namespace: istio-system
   name: ossmconsole
