@@ -3,3 +3,5 @@ kind: Kustomization
 
 resources:
 - openshift-gitops-operator.yaml
+- openshift-operators-redhat-ns.yaml
+- openshift-operators-redhat.yaml
