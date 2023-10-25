@@ -6,11 +6,11 @@ metadata:
   name: smcp
   namespace: istio-system
 spec:
-  proxy:
-    networking:
-      trafficControl:
-        outbound:
-          policy: REGISTRY_ONLY
+  # proxy:
+  #   networking:
+  #     trafficControl:
+  #       outbound:
+  #         policy: REGISTRY_ONLY
   addons:
     grafana:
       enabled: true
@@ -20,6 +20,7 @@ spec:
           type: Memory
     kiali:
       enabled: true
+      name: kiali
     prometheus:
       enabled: true
   policy:
@@ -29,6 +30,5 @@ spec:
   telemetry:
     type: Istiod
   tracing:
-    sampling: 10000
-    type: Jaeger
-  version: v2.3
+    sampling: 5000 # https://docs.openshift.com/container-platform/4.13/service_mesh/v2x/ossm-observability.html
+  version: v2.4
