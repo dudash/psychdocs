@@ -4,6 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "20"
   name: psychdocs-keycloak
+  namespace: psychdocs
   labels:
     app: sso
 spec:
