@@ -4,5 +4,5 @@ This folder is referenced by an ApplicationSet in the bootstrap config YAML.
 
 ## Current List
 * GitOps Controller (ArgoCD)
-* Service Mesh (Istio)
+* Service Mesh (Istio) - version in the .yaml
 * more coming - API gateway, SSO, etc
