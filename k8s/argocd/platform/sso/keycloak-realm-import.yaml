@@ -1,12 +1,14 @@
-apiVersion: k8s.keycloak.org/v2alpha1
-kind: KeycloakRealmImport
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakRealm
 metadata:
-  argocd.argoproj.io/sync-wave: 30"
-  name: psychdocs-realm
+  name: psychdocs-keycloakrealm
+  namespace: psychdocs
 spec:
-  keycloakCRName: psychdocs-keycloak
+  instanceSelector:
+    matchLabels:
+      app: sso
   realm:
-    id: psychdocs-realm
-    realm: epsychdocs-realm
-    displayName: PsychdocsRealm
+    displayName: Psychdocs Realm
     enabled: true
+    id: basic
+    realm: basic
