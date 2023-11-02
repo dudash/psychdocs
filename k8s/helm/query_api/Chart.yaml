@@ -1,6 +1,6 @@
 apiVersion: v2
-name: webapp
-description: A Helm chart for Kubernetes
+name: query_api
+description: the query microservice provides an API for querying the LLM
 
 # A chart can be either an 'application' or a 'library' chart.
 #

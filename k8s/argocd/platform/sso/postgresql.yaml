@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  argocd.argoproj.io/sync-wave: "30"
+  argocd.argoproj.io/sync-wave: "20"
   name: postgresql-db
 spec:
   serviceName: postgresql-db-service
