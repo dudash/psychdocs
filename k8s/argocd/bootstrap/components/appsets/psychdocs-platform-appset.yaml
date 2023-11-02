@@ -23,18 +23,19 @@ spec:
         jsonPointers:
         - /data/service-ca.crt
       project: psychdocs-platform
-      syncPolicy: {}
-        # automated:
-        #   prune: true
-        #   selfHeal: true
-        # syncOptions:
-        # - ApplyOutOfSyncOnly=true
-        # retry:
-        #   limit: 15
-        #   backoff:
-        #     duration: 15s
-        #     factor: 2
-        #     maxDuration: 5m
+      syncPolicy:
+      # {} uncomment this and comment the rest to remove autosync
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - ApplyOutOfSyncOnly=true
+        retry:
+          limit: 15
+          backoff:
+            duration: 15s
+            factor: 2
+            maxDuration: 5m
       source:
         repoURL: https://github.com/dudash/psychdocs
         targetRevision: main
