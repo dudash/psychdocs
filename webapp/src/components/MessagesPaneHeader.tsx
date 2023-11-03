@@ -7,7 +7,6 @@ import Stack from '@mui/joy/Stack';
 import Typography from '@mui/joy/Typography';
 import CircleIcon from '@mui/icons-material/Circle';
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
-import PhoneInTalkRoundedIcon from '@mui/icons-material/PhoneInTalkRounded';
 import MoreVertRoundedIcon from '@mui/icons-material/MoreVertRounded';
 import { UserProps } from '../types';
 import { toggleMessagesPane } from '../utils';
@@ -74,17 +73,6 @@ export default function MessagesPaneHeader({ sender }: MessagesPaneHeaderProps) 
         </div>
       </Stack>
       <Stack spacing={1} direction="row" alignItems="center">
-        <Button
-          startDecorator={<PhoneInTalkRoundedIcon />}
-          color="neutral"
-          variant="outlined"
-          size="sm"
-          sx={{
-            display: { xs: 'none', md: 'inline-flex' },
-          }}
-        >
-          Call
-        </Button>
         <Button
           color="neutral"
           variant="outlined"

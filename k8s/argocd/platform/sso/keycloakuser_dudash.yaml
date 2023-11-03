@@ -1,0 +1,19 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakUser
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "60"
+  name: keycloakuser-dudash
+  labels:
+    app: sso
+spec:
+  user:
+    username: "dudedudash"
+    firstName: "Dude"
+    lastName: "Dudash"
+    email: "dudash@email.com"
+    enabled: True
+    emailVerified: False
+  realmSelector:
+    matchLabels:
+      app: sso

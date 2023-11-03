@@ -5,7 +5,7 @@ import ChatsPane from './ChatsPane';
 import { ChatProps } from '../types';
 import { chats } from '../dummydata';
 
-export default function MyProfile() {
+export default function ChatListWithMessages() {
   const [selectedChat, setSelectedChat] = React.useState<ChatProps>(chats[0]);
   return (
     <Sheet

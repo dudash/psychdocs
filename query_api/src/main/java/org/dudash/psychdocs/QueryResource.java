@@ -63,15 +63,15 @@ public class QueryResource {
             if (keyValueCredentials[1].compareTo(quickAuthPassword)!=0) return Response.status(401).build();
         }
         else {
-            System.out.println("POST to /score: ignoring basic auth");
+            System.out.println("POST to /query: ignoring basic auth");
         }
         if (checksumEnforcing) {
-            // System.out.println("POST to /score: checksum="+score.checksum);
+            // System.out.println("POST to /query: checksum="+query.checksum);
             // if (query.checksum == null || query.checksum.length()<=0) return Response.status(401).build();
-            // if (!validateChecksum(query.name, query.score.toString(), query.checksum)) return Response.status(401).build();
+            // if (!validateChecksum(query.name, query.query.toString(), query.checksum)) return Response.status(401).build();
         }
         else {
-            System.out.println("POST to /score: ignoring checksums");
+            System.out.println("POST to /query: ignoring checksums");
         }
         query.persist();
         return Response.status(201).build();

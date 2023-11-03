@@ -3,12 +3,7 @@ import Box from '@mui/joy/Box';
 import Button from '@mui/joy/Button';
 import FormControl from '@mui/joy/FormControl';
 import Textarea from '@mui/joy/Textarea';
-import { IconButton, Stack } from '@mui/joy';
-
-import FormatBoldRoundedIcon from '@mui/icons-material/FormatBoldRounded';
-import FormatItalicRoundedIcon from '@mui/icons-material/FormatItalicRounded';
-import StrikethroughSRoundedIcon from '@mui/icons-material/StrikethroughSRounded';
-import FormatListBulletedRoundedIcon from '@mui/icons-material/FormatListBulletedRounded';
+import { Stack } from '@mui/joy';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
 
 export type MessageInputProps = {
@@ -56,7 +51,7 @@ export default function MessageInput({
               }}
             >
               <div>
-                <IconButton size="sm" variant="plain" color="neutral">
+                {/* <IconButton size="sm" variant="plain" color="neutral">
                   <FormatBoldRoundedIcon />
                 </IconButton>
                 <IconButton size="sm" variant="plain" color="neutral">
@@ -67,11 +62,10 @@ export default function MessageInput({
                 </IconButton>
                 <IconButton size="sm" variant="plain" color="neutral">
                   <FormatListBulletedRoundedIcon />
-                </IconButton>
+                </IconButton> */}
               </div>
               <Button
                 size="sm"
-                color="primary"
                 sx={{ alignSelf: 'center', borderRadius: 'sm' }}
                 endDecorator={<SendRoundedIcon />}
                 onClick={handleClick}

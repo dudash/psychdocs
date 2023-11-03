@@ -11,7 +11,7 @@ echo "You are currently in namespace: $(kubectl config view --minify -o jsonpath
 kubectl version
 echo "Cluster ID:" $(kubectl get clusterversion -o jsonpath='{.items[].spec.clusterID}')
 
-# create a list of options for overlay to use from the folder ../arcgocd/bootstrap/overlays, allow the user to select one
+# create a list of options for overlay to use, allow the user to select one
 echo "Select the details of K8s/OpenShift cluster you have:"
 select overlay in $(ls -1 ../argocd/bootstrap/overlays); do
   if [ -n "$overlay" ]; then

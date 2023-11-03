@@ -4,7 +4,7 @@ import CssBaseline from '@mui/joy/CssBaseline';
 import Box from '@mui/joy/Box';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
-import MyMessages from './components/MyMessages';
+import ChatListWithMessages from './components/ChatListWithMessages';
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
         <Sidebar />
         <Header />
         <Box component="main" className="MainContent" sx={{ flex: 1 }}>
-          <MyMessages />
+          <ChatListWithMessages />
         </Box>
       </Box>
     </CssVarsProvider>

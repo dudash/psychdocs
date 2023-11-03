@@ -25,10 +25,10 @@ export default function ChatsPane({
   return (
     <Sheet
       sx={{
-        borderRight: '1px solid',
-        borderColor: 'divider',
-        height: 'calc(100dvh - var(--Header-height))',
-        overflowY: 'auto',
+        borderRight: "1px solid",
+        borderColor: "divider",
+        height: "calc(100dvh - var(--Header-height))",
+        overflowY: "auto",
       }}
     >
       <Stack
@@ -40,7 +40,7 @@ export default function ChatsPane({
         pb={1.5}
       >
         <Typography
-          fontSize={{ xs: 'md', md: 'lg' }}
+          fontSize={{ xs: "md", md: "lg" }}
           component="h1"
           fontWeight="lg"
           endDecorator={
@@ -48,14 +48,14 @@ export default function ChatsPane({
               variant="soft"
               color="primary"
               size="md"
-              slotProps={{ root: { component: 'span' } }}
+              slotProps={{ root: { component: "span" } }}
             >
-              4
+              2
             </Chip>
           }
-          sx={{ mr: 'auto' }}
+          sx={{ mr: "auto" }}
         >
-          Messages
+          Chats
         </Typography>
 
         <IconButton
@@ -63,9 +63,9 @@ export default function ChatsPane({
           aria-label="edit"
           color="neutral"
           size="sm"
-          sx={{ display: { xs: 'none', sm: 'unset' } }}
+          sx={{ display: { xs: "none", sm: "unset" } }}
         >
-          <EditNoteRoundedIcon />
+          NEW <EditNoteRoundedIcon />
         </IconButton>
 
         <IconButton
@@ -76,7 +76,7 @@ export default function ChatsPane({
           onClick={() => {
             toggleMessagesPane();
           }}
-          sx={{ display: { sm: 'none' } }}
+          sx={{ display: { sm: "none" } }}
         >
           <CloseRoundedIcon />
         </IconButton>
@@ -92,8 +92,8 @@ export default function ChatsPane({
       <List
         sx={{
           py: 0,
-          '--ListItem-paddingY': '0.75rem',
-          '--ListItem-paddingX': '1rem',
+          "--ListItem-paddingY": "0.75rem",
+          "--ListItem-paddingX": "1rem",
         }}
       >
         {chats.map((chat) => (

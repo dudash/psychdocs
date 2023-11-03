@@ -5,6 +5,8 @@ metadata:
     argocd.argoproj.io/sync-wave: "50"
   name: psychdocs-keycloakrealm
   namespace: psychdocs
+  labels:
+    app: sso
 spec:
   instanceSelector:
     matchLabels:
