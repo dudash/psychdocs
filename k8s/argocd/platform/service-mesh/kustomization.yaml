@@ -19,4 +19,4 @@ resources:
 - smcp.yaml
 - isto-system-prometheus-htpasswd.yaml
 - ossmconsole-operator.yaml
-- ossmconsole.yaml
+# - ossmconsole.yaml

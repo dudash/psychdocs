@@ -4,6 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "60"
   name: keycloakuser-dudash
+  namespace: psychdocs
   labels:
     app: sso
 spec:
