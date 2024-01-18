@@ -2,25 +2,26 @@ import * as React from 'react';
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import Avatar from '@mui/joy/Avatar';
 import Box from '@mui/joy/Box';
-import Button from '@mui/joy/Button';
-import Card from '@mui/joy/Card';
-import Chip from '@mui/joy/Chip';
+// import Button from '@mui/joy/Button';
+// import Card from '@mui/joy/Card';
+// import Chip from '@mui/joy/Chip';
 import Divider from '@mui/joy/Divider';
 import IconButton from '@mui/joy/IconButton';
 // import Input from '@mui/joy/Input';
 // import LinearProgress from '@mui/joy/LinearProgress';
+import Link from '@mui/joy/Link';
 import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
 import ListItemButton, { listItemButtonClasses } from '@mui/joy/ListItemButton';
 import ListItemContent from '@mui/joy/ListItemContent';
 import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
-// import Stack from '@mui/joy/Stack';
-// import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import Stack from '@mui/joy/Stack';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded';
-// import SupportRoundedIcon from '@mui/icons-material/SupportRounded';
-// import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
+import SupportRoundedIcon from '@mui/icons-material/SupportRounded';
+import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import BrightnessAutoRoundedIcon from '@mui/icons-material/BrightnessAutoRounded';
 
@@ -146,6 +147,7 @@ export default function Sidebar() {
             '--ListItem-radius': (theme) => theme.vars.radius.sm,
           }}
         >
+          {/* Home or Dashboard */}
           <ListItem>
             <ListItemButton>
               <HomeRoundedIcon />
@@ -154,14 +156,13 @@ export default function Sidebar() {
               </ListItemContent>
             </ListItemButton>
           </ListItem>
-
+          {/* Chat List */}
           <ListItem>
             <ListItemButton selected>
               <QuestionAnswerRoundedIcon />
               <ListItemContent>
                 <Typography level="title-sm">Chats</Typography>
               </ListItemContent>
-
 {/* FUTURE - If any unread Query responses, show a badge here */}
               {/* <Chip size="sm" color="primary" variant="solid">
                 2
@@ -171,8 +172,8 @@ export default function Sidebar() {
 
         </List>
 
-          {/* Support and Settings in the future */}
-        {/* <List
+        {/* Support and Settings in the future */}
+        <List
           size="sm"
           sx={{
             mt: 'auto',
@@ -182,20 +183,18 @@ export default function Sidebar() {
             mb: 2,
           }}
         >
-          <ListItem>
+          {/* <ListItem>
             <ListItemButton>
               <SupportRoundedIcon />
               Support
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
           <ListItem>
-            <ListItemButton>
-              <SettingsRoundedIcon />
-              Settings
+            <ListItemButton button component={Link} to="/about">
+              <SettingsRoundedIcon /> Settings
             </ListItemButton>
           </ListItem>
-        </List> */}
-
+        </List>
 
       </Box>
 

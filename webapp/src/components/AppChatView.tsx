@@ -5,7 +5,7 @@ import ChatsPane from './ChatsPane';
 import { ChatProps } from '../types';
 import { chats } from '../dummydata';
 
-export default function ChatListWithMessages() {
+export default function AppChatView() {
   const [selectedChat, setSelectedChat] = React.useState<ChatProps>(chats[0]);
   return (
     <Sheet
@@ -21,7 +21,6 @@ export default function ChatListWithMessages() {
         },
       }}
     >
-      {/* chats sheet */}
       <Sheet
         sx={{
           position: {
@@ -43,6 +42,7 @@ export default function ChatListWithMessages() {
 
       {/* messages in the selected chat */}
       <MessagesPane chat={selectedChat} />
-    </Sheet>
+     
+     </Sheet>
   );
 }

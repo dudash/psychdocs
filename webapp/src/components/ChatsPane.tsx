@@ -81,14 +81,15 @@ export default function ChatsPane({
           <CloseRoundedIcon />
         </IconButton>
       </Stack>
-      <Box sx={{ px: 2, pb: 1.5 }}>
+      {/* // Add local search in the future */}
+      {/* <Box sx={{ px: 2, pb: 1.5 }}>
         <Input
           size="sm"
           startDecorator={<SearchRoundedIcon />}
           placeholder="Search"
           aria-label="Search"
         />
-      </Box>
+      </Box> */}
       <List
         sx={{
           py: 0,

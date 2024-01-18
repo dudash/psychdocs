@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Avatar from '@mui/joy/Avatar';
-import Button from '@mui/joy/Button';
+// import Button from '@mui/joy/Button';
 import Chip from '@mui/joy/Chip';
 import IconButton from '@mui/joy/IconButton';
 import Stack from '@mui/joy/Stack';
@@ -61,7 +61,7 @@ export default function MessagesPaneHeader({ sender }: MessagesPaneHeaderProps) 
                   }
                   slotProps={{ root: { component: 'span' } }}
                 >
-                  Online
+                  Available
                 </Chip>
               ) : undefined
             }
@@ -73,7 +73,7 @@ export default function MessagesPaneHeader({ sender }: MessagesPaneHeaderProps) 
         </div>
       </Stack>
       <Stack spacing={1} direction="row" alignItems="center">
-        <Button
+        {/* <Button
           color="neutral"
           variant="outlined"
           size="sm"
@@ -82,7 +82,7 @@ export default function MessagesPaneHeader({ sender }: MessagesPaneHeaderProps) 
           }}
         >
           View profile
-        </Button>
+        </Button> */}
 
         <IconButton size="sm" variant="plain" color="neutral">
           <MoreVertRoundedIcon />
