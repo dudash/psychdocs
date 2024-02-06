@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center"><a href="https://www.epicweb.dev/epic-stack">The Epic Stack 🚀</a></h1>
+  <h1 align="center"><a href="https://www.epicweb.dev/epic-stack">EVALUATING THIS TO REPLACE WEBAPP COMPONENT - The Epic Stack 🚀</a></h1>
   <strong align="center">
     Ditch analysis paralysis and start shipping Epic Web apps.
   </strong>
